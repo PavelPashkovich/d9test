@@ -1,0 +1,5 @@
+name: Dummy
+description: Dummy hook example
+core_version_requirement: 9.x
+type: module
+package: Custom

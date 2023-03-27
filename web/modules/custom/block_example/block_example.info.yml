@@ -1,0 +1,7 @@
+name: Block Example
+description: Description of block example
+core_version_requirement: 9.x
+type: module
+package: Custom
+dependencies:
+  - drupal:block

@@ -1,0 +1,4 @@
+services:
+  service_example.random_message:
+    class: Drupal\service_example\RandomMessageGenerator
+

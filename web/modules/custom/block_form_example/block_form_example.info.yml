@@ -1,0 +1,7 @@
+name: Block Form Example
+description: Description of block form example
+core_version_requirement: 9.x
+type: module
+package: Custom
+dependencies:
+  - drupal:block
