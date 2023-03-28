@@ -2,4 +2,5 @@ name: Odd Even Minute Block
 description: Showing an odd-even-minute block module
 core_version_requirement: 9.x
 type: module
+configure: odd_even_minute_block.admin_settings
 

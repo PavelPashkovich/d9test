@@ -1,0 +1,4 @@
+odd_even_minute_block.admin_settings:
+  title: 'Odd even minute'
+  parent: system.admin_config
+  route_name: odd_even_minute_block.admin_settings

@@ -14,12 +14,14 @@
  * Пространство имен нашего контроллера. Обратите внимание что оно схоже с тем
  * что описано выше, только опускается название нашего класса.
  */
+
 namespace Drupal\helloworld\Controller;
 
 /**
  * Используем друпальный класс ControllerBase. Мы будем от него наследоваться,
  * а он за нас сделает все обязательные вещи которые присущи всем контроллерам.
  */
+
 use Drupal\Core\Controller\ControllerBase;
 
 /**
@@ -34,9 +36,8 @@ class HelloWorldController extends ControllerBase {
    * из данной функции содержимого для страницы, мы также должны вернуть
    * массив который спокойно пройдет через drupal_render().
    */
-  public function helloWorld(): array
-  {
-    $output = array();
+  public function helloWorld(): array {
+    $output = [];
 
     $output['#title'] = 'HelloWorld page title';
 

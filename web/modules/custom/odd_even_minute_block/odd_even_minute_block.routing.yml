@@ -1,0 +1,7 @@
+odd_even_minute_block.admin_settings:
+  path: '/admin/config/odd-even-minute-block'
+  defaults:
+    _form: '\Drupal\odd_even_minute_block\Form\ModuleConfigurationForm'
+    _title: 'Odd even minute block configuration screen'
+  requirements:
+    _permission: 'administer site configuration'
