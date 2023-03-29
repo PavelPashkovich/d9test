@@ -7,8 +7,7 @@ namespace Drupal\odd_even_minute_block;
  *
  * @package Drupal\odd_even_minute_block
  */
-class OddEvenMinuteService
-{
+class OddEvenMinuteService {
 
   /**
    * Get odd or even minute depending on current time.
@@ -16,8 +15,8 @@ class OddEvenMinuteService
    * @return string
    *    Odd or even minute.
    */
-    public function getOddEvenMinute(): string
-    {
-        return ((int) date('i')) % 2 === 0 ? 'even_minute' : 'odd_minute';
-    }
+  public function getOddEvenMinute(): string {
+    return ((int) date('i')) % 2 === 0 ? 'even_minute' : 'odd_minute';
+  }
+
 }
