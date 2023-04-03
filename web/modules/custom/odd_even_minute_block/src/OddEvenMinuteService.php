@@ -7,7 +7,7 @@ namespace Drupal\odd_even_minute_block;
  *
  * @package Drupal\odd_even_minute_block
  */
-class OddEvenMinuteService {
+class OddEvenMinuteService implements OddEvenMinuteServiceInterface {
 
   /**
    * Get odd or even minute depending on current time.

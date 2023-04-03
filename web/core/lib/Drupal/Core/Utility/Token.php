@@ -290,6 +290,7 @@ class Token {
     // Matches tokens with the following pattern: [$type:$name]
     // $type and $name may not contain [ ] characters.
     // $type may not contain : or whitespace characters, but $name may.
+    $text = $text ?? "";
     preg_match_all('/
       \[             # [ - pattern start
       ([^\s\[\]:]+)  # match $type not containing whitespace : [ or ]

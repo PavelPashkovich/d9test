@@ -474,6 +474,7 @@ EOD;
    *   TRUE if the text is valid UTF-8, FALSE if not.
    */
   public static function validateUtf8($text) {
+    $text = $text ?? "";
     if (strlen($text) == 0) {
       return TRUE;
     }

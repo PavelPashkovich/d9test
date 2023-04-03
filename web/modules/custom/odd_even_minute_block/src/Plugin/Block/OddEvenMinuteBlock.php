@@ -38,10 +38,8 @@ class OddEvenMinuteBlock extends BlockBase implements ContainerFactoryPluginInte
    */
   public function build(): array {
     $minute = $this->getOddEvenMinute->getOddEvenMinute();
-
     $config = $this->config->get('odd_even_minute_block.admin_settings');
-
-    $message = $config->get($minute);
+    $message = ($config->get($minute))['value'];
 
     return [
       '#markup' => "<h2>$message</h2>",

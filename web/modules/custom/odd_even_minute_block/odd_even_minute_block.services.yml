@@ -7,5 +7,3 @@ services:
       - { name: cache.context }
   get_odd_even_minute:
     class: Drupal\odd_even_minute_block\OddEvenMinuteService
-#  config:
-#    class: Drupal\Core\Config\ConfigFactory

@@ -5,6 +5,7 @@
  */
 function plugin_messages_preprocess_page(&$variables) {
   $plugin_service = \Drupal::service('plugin.manager.plugin_messages');
+  $plugin_definitions = $plugin_service->getDefinitions();
   foreach ($plugin_service->getDefinitions() as $plugin_id => $plugin) {
     $instance = $plugin_service->createInstance($plugin_id);
     $message_type = $instance->getMessageType();
