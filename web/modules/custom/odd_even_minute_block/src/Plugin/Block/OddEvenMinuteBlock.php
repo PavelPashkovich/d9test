@@ -19,7 +19,18 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class OddEvenMinuteBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
+  /**
+   * The 'get_odd_even_minute' service.
+   *
+   * @var \Drupal\odd_even_minute_block\OddEvenMinuteServiceInterface
+   */
   private $getOddEvenMinute;
+
+  /**
+   * The 'config.factory' service.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
   private $config;
 
   /**
@@ -39,7 +50,7 @@ class OddEvenMinuteBlock extends BlockBase implements ContainerFactoryPluginInte
   public function build(): array {
     $minute = $this->getOddEvenMinute->getOddEvenMinute();
     $config = $this->config->get('odd_even_minute_block.admin_settings');
-    $message = ($config->get($minute))['value'];
+    $message = $config->get($minute);
 
     return [
       '#markup' => "<h2>$message</h2>",

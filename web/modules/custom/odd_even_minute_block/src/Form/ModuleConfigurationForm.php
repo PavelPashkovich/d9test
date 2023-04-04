@@ -31,19 +31,27 @@ class ModuleConfigurationForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('odd_even_minute_block.admin_settings');
-//    $config->set('odd_minute', '');
-//    $config->set('even_minute', '');
 
     $form['odd_minute'] = [
       '#type' => 'text_format',
+      '#format' => 'basic_html',
+      '#allowed_formats' => [
+        'restricted_html',
+        'basic_html',
+      ],
       '#title' => $this->t('Message for odd minute'),
-      '#default_value' => $config->get('odd_minute') ?? '',
+      '#default_value' => $config->get('odd_minute'),
     ];
 
     $form['even_minute'] = [
       '#type' => 'text_format',
+      '#format' => 'basic_html',
+      '#allowed_formats' => [
+        'restricted_html',
+        'basic_html',
+      ],
       '#title' => $this->t('Message for even minute'),
-      '#default_value' => $config->get('even_minute') ?? '',
+      '#default_value' => $config->get('even_minute'),
     ];
 
     return parent::buildForm($form, $form_state);
